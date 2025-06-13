@@ -1,5 +1,5 @@
 [project]
-name = "test-cscode-python"
+name = "uv-python-template"
 version = "0.1.0"
 description = "Add your description here"
 readme = "README.md"
