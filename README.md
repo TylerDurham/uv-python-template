@@ -13,7 +13,6 @@ docker build --build-arg API_KEY=myapikey \
      . -t tylerdurham/uv-python-template
 ```
 
-## Run
 
 ``` shell
 docker build --secret id=DB_PASSWORD \
@@ -23,4 +22,18 @@ docker build --secret id=DB_PASSWORD \
              --secret id=ACCESS_TOKEN_SECRET_KEY \
              --target=production \
               . -t tylerdurham/uv-python-template
+```
+
+## Run
+
+``` shell
+export DB_PASSWORD="mydbpassword"
+export DB_USER="mydbuser"
+export DB_NAME="mydbname"
+export DB_HOST="mydbhost"
+export ACCESS_TOKEN_SECRET_KEY="mysecretkey"
+```
+
+``` shell
+docker run -p 8080:8080 tylerdurham/uv-python-template
 ```
