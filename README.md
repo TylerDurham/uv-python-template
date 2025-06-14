@@ -20,10 +20,10 @@ docker build --build-arg API_KEY=myapikey \
 Set secrets in ENV:
 
 ``` shell
-export DB_PASSWORD="mydbpassword"
-export DB_USERID="mydbuser"
-export DB_NAME="mydbname"
-export DB_HOST="mydbhost"
+export DB_PASSWORD="mydbpassword" \
+export DB_USERID="mydbuser" \
+export DB_NAME="mydbname" \
+export DB_HOST="mydbhost" \
 export ACCESS_TOKEN_SECRET_KEY="mysecretkey"
 ```
 

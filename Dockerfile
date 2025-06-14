@@ -27,7 +27,7 @@ RUN --mount=type=secret,id=DB_PASSWORD \
     --mount=type=secret,id=DB_NAME \
     --mount=type=secret,id=DB_HOST \
     --mount=type=secret,id=ACCESS_TOKEN_SECRET_KEY \
-    DB_PASSWORD=/run/secrets/DB_PASSWORD \
+    DB_PASSWORD=$(/run/secrets/DB_PASSWORD) \
     DB_USERID=$(cat /run/secrets/DB_USERID) \
     DB_NAME=$(cat /run/secrets/DB_NAME) \
     DB_HOST=$(cat /run/secrets/DB_HOST) \
@@ -50,7 +50,7 @@ ENV PATH="/app/.venv/bin:$PATH"
 EXPOSE $PORT
 
 # Start the application with Uvicorn in production mode, using environment variable references
-CMD ["uvicorn", "my_svc.main:app", "--log-level", "info", "--host", "0.0.0.0" , "--port", "8080"]
+CMD ["uvicorn", "my_svc.main:app", "--log-level", "info", "--port", "8080"]
 
 
 

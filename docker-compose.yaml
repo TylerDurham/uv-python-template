@@ -1,12 +1,13 @@
 
 services:
   app:
+    container_name: uv-python-template
     build:
       context: .
       target: production
       secrets:
         - DB_PASSWORD
-        - DB_USER
+        - DB_USERID
         - DB_NAME
         - DB_HOST
         - ACCESS_TOKEN_SECRET_KEY
@@ -14,17 +15,17 @@ services:
     volumes:
       - ${PWD}/logs:/app/logs
     ports:
-      - "80:80"
+      - "80:8080"
     secrets:
       - DB_PASSWORD
-      - DB_USER
+      - DB_USERID
       - DB_NAME
       - DB_HOST
       - ACCESS_TOKEN_SECRET_KEY
     environment:
       # Pass secrets as environment variables
       DB_PASSWORD: /run/secrets/DB_PASSWORD
-      DB_USER: /run/secrets/DB_USER
+      DB_USER: /run/secrets/DB_USERID
       DB_NAME: /run/secrets/DB_NAME
       DB_HOST: /run/secrets/DB_HOST
       ACCESS_TOKEN_SECRET_KEY: /run/secrets/ACCESS_TOKEN_SECRET_KEY
@@ -32,8 +33,8 @@ services:
 secrets:
   DB_PASSWORD:
     environment: "DB_PASSWORD"
-  DB_USER:
-    environment: "DB_USER"
+  DB_USERID:
+    environment: "DB_USERID"
   DB_NAME:
     environment: "DB_NAME"
   DB_HOST:
