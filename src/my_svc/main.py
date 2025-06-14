@@ -26,7 +26,7 @@ async def error():
     raise Exception("This is a test exception")
 
 
-# UNCOMMENT THIS SECTION TO TEST ENVIRONMENT VARIABLES
+# REMOVE THIS SECTION AFTER TESTING!!!!!!!!!!
 @app.get("/settings")
 async def settings():
     return {
