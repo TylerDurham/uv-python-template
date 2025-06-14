@@ -50,3 +50,10 @@ or
 ``` shell
 docker compose up -d
 ```
+
+You may need to set permissions on the log directory in the host:
+
+``` shell
+sudo chown user:group logs
+chmod 755 logs
+```
