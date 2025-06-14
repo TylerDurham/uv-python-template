@@ -12,3 +12,34 @@
 2025-06-13 19:39:43,202 INFO uvicorn.error Application shutdown complete.
 2025-06-13 19:39:43,202 INFO uvicorn.error Finished server process [69987]
 2025-06-13 19:39:43,209 INFO uvicorn.error Stopping reloader process [69978]
+2025-06-13 19:53:48,228 INFO uvicorn.error Will watch for changes in these directories: ['/Users/tylerd/Development/@github.com/TylerDurham/uv-python-template']
+2025-06-13 19:53:48,228 INFO uvicorn.error Uvicorn running on http://127.0.0.1:8000 (Press CTRL+C to quit)
+2025-06-13 19:53:48,229 INFO uvicorn.error Started reloader process [73690] using WatchFiles
+2025-06-13 19:53:48,559 INFO uvicorn.error Started server process [73692]
+2025-06-13 19:53:48,559 INFO uvicorn.error Waiting for application startup.
+2025-06-13 19:53:48,559 INFO uvicorn.error Application startup complete.
+2025-06-13 19:54:17,695 INFO my_svc.main Received request with name: World
+2025-06-13 19:54:20,851 INFO my_svc.main Received request with name: World
+2025-06-13 19:54:21,066 INFO my_svc.main Received request with name: World
+2025-06-13 19:54:21,235 INFO my_svc.main Received request with name: World
+2025-06-13 19:54:21,417 INFO my_svc.main Received request with name: World
+2025-06-13 19:55:02,594 INFO watchfiles.main 1 change detected
+2025-06-13 19:55:02,595 WARNING uvicorn.error WatchFiles detected changes in 'src/my_svc/logging_utils.py'. Reloading...
+2025-06-13 19:55:02,606 INFO uvicorn.error Shutting down
+2025-06-13 19:55:02,707 INFO uvicorn.error Waiting for application shutdown.
+2025-06-13 19:55:02,708 INFO uvicorn.error Application shutdown complete.
+2025-06-13 19:55:02,708 INFO uvicorn.error Finished server process [73692]
+2025-06-13 19:55:03,129 INFO watchfiles.main 5 changes detected
+2025-06-13 19:55:14,515 INFO watchfiles.main 1 change detected
+2025-06-13 19:55:14,873 INFO watchfiles.main 3 changes detected
+2025-06-13 19:58:14,178 INFO watchfiles.main 1 change detected
+2025-06-13 19:58:14,178 WARNING uvicorn.error WatchFiles detected changes in 'src/my_svc/logging_utils.py'. Reloading...
+2025-06-13 19:58:14,744 INFO watchfiles.main 4 changes detected
+2025-06-13 19:58:15,110 INFO watchfiles.main 1 change detected
+2025-06-13 19:58:15,523 INFO watchfiles.main 3 changes detected
+2025-06-13 19:59:14,379 INFO watchfiles.main 1 change detected
+2025-06-13 19:59:14,379 WARNING uvicorn.error WatchFiles detected changes in 'src/my_svc/logging_utils.py'. Reloading...
+2025-06-13 19:59:15,001 INFO watchfiles.main 4 changes detected
+2025-06-13 20:02:00,308 INFO watchfiles.main 1 change detected
+2025-06-13 20:02:00,668 INFO watchfiles.main 3 changes detected
+2025-06-13 20:02:04,764 INFO uvicorn.error Stopping reloader process [73690]

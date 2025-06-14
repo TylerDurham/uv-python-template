@@ -6,15 +6,20 @@ import sys
 from fastapi import Request
 from fastapi.responses import JSONResponse
 
+CWD = os.getcwd()
+LOG_DIR = os.path.join(CWD, "logs")
+LOG_FILE = os.path.join(LOG_DIR, "app.log")
+os.makedirs(LOG_DIR, exist_ok=True)
+
 
 def setup_logging():
-    log_file = os.path.join(os.getcwd(), "app.log")
+    log_file = os.path.join(os.getcwd(), LOG_FILE)
     logging_config = {
         "version": 1,
         "disable_existing_loggers": False,
         "formatters": {
             "default": {
-                "format": "%(asctime)s %(levelname)s %(name)s %(message)s",
+                "format": "%(asctime)s %(levelname)s %(name)s %(lineno)d %(funcName)s %(message)s",
             },
         },
         "handlers": {

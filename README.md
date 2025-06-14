@@ -42,5 +42,5 @@ docker build --secret id=DB_PASSWORD \
 ## Run
 
 ``` shell
-docker run -p 8080:8080 tylerdurham/uv-python-template
+docker run -v "$(pwd)/logs:/app/logs" -p 8080:8080 tylerdurham/uv-python-template
 ```
