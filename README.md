@@ -9,7 +9,7 @@
 
 ``` shell
 docker build --build-arg API_KEY=myapikey \
-    --build-arg DB_USER=mydbuser \
+    --build-arg DB_USERID=mydbuser \
     --build-arg DB_PASSWORD=mydbpassword \
     --build-arg DB_HOSTNAME=mydbname \
      . -t tylerdurham/uv-python-template
@@ -21,7 +21,7 @@ Set secrets in ENV:
 
 ``` shell
 export DB_PASSWORD="mydbpassword"
-export DB_USER="mydbuser"
+export DB_USERID="mydbuser"
 export DB_NAME="mydbname"
 export DB_HOST="mydbhost"
 export ACCESS_TOKEN_SECRET_KEY="mysecretkey"
@@ -31,7 +31,7 @@ Build the image:
 
 ``` shell
 docker build --secret id=DB_PASSWORD \
-             --secret id=DB_USER \
+             --secret id=DB_USERID \
              --secret id=DB_NAME \
              --secret id=DB_HOST \
              --secret id=ACCESS_TOKEN_SECRET_KEY \
