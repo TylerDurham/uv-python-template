@@ -44,3 +44,9 @@ docker build --secret id=DB_PASSWORD \
 ``` shell
 docker run -v "$(pwd)/logs:/app/logs" -p 8080:8080 tylerdurham/uv-python-template
 ```
+
+or
+
+``` shell
+docker compose up -d
+```
