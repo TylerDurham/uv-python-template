@@ -40,7 +40,7 @@ USER appuser
 
 WORKDIR /app
 
-COPY /src src
+COPY /src .
 COPY --from=builder /app/.venv .venv
 
 # Set up environment variables for production
@@ -50,7 +50,7 @@ ENV PATH="/app/.venv/bin:$PATH"
 EXPOSE $PORT
 
 # Start the application with Uvicorn in production mode, using environment variable references
-CMD ["uvicorn", "src.my_svc.main:app", "--log-level", "info", "--host", "0.0.0.0" , "--port", "8080"]
+CMD ["uvicorn", "my_svc.main:app", "--log-level", "info", "--host", "0.0.0.0" , "--port", "8080"]
 
 
 
