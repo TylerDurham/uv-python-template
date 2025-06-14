@@ -2,8 +2,10 @@
 FROM python:3.13-bookworm AS builder
 
 RUN apt-get update && apt-get install --no-install-recommends -y \
-    build-essential curl && \
+    build-essential && \
     apt-get clean && rm -rf /var/lib/apt/lists/*
+
+RUN apt-get install curl -y
 
 # Download the latest installer, install it and then remove it
 ADD https://astral.sh/uv/install.sh /install.sh
