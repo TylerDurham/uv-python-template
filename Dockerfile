@@ -52,7 +52,7 @@ ENV PATH="/app/.venv/bin:$PATH"
 EXPOSE $PORT
 
 # Start the application with Uvicorn in production mode, using environment variable references
-CMD ["uvicorn", "my_svc.main:app", "--log-level", "info", "--port", "8080"]
+CMD ["uvicorn", "my_svc.main:app", "--host", "0.0.0.0", "--log-level", "info", "--port", "8080"]
 
 
 
